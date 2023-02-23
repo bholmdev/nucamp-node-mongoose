@@ -23,6 +23,7 @@ connect.then(() => {
     })
     .then(campsites => {
         console.log(campsites);
+        return Campsite.deleteMany();
     })
     .then(() => {
         return mongoose.connection.close();
